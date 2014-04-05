@@ -2,6 +2,25 @@
   (:require [clojure.test :refer :all]
             [clj-duplicate.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(def picture_a "cat_grumpy_orig.png")
+(def picture_b "cat_grumpy_modif.png")
+
+(defn compare_pictures [a b]
+  (let [hasha (generate-dhash a)
+        hashb (generate-dhash b)]
+    [hasha hashb]))
+
+(deftest compare-same-pictures_a
+  (testing "Both pictures are equal"
+    (let [hashes (compare_pictures picture_a picture_a)]
+    (is (apply = hashes)))))
+
+(deftest compare-same-pictures_b
+  (testing "Both pictures are equal"
+    (let [hashes (compare_pictures picture_b picture_b)]
+    (is (apply = hashes)))))
+
+(deftest compare-example-pictures
+  (testing "Pictures with small difference"
+    (let [hashes (compare_pictures picture_a picture_b)]
+    (is (apply = hashes)))))
