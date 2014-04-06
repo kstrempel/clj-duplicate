@@ -27,7 +27,9 @@
     (let [hashes (compare_pictures picture_a picture_b)]
     (is (apply = hashes)))))
 
-(deftest compare-google-drive-soundcloud-pictures
+(deftest compare-contact-with-superman
   (testing "Pictures with big difference"
     (let [hashes (compare_pictures picture_contact picture_superman)]
     (is (not (apply = hashes))))))
+
+

@@ -1,14 +1,18 @@
-# clj_duplicate
+# CLJ_DUPLICATE
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed after the idea from ["Detecting duplicate images using Python"](ttp://blog.iconfinder.com/detecting-duplicate-images-using-python/).
 
 ## Usage
 
-FIXME
+```
+(ns clj-duplicate.core-test
+  (:require [clj-duplicate.core :refer :all]))
+  
+(generate-dhash "cat_grumpy_orig.png")
+```
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Kai Strempel
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Licensed under the EPL (see the file epl.html).

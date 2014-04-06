@@ -36,6 +36,10 @@
             ""
             (dhash-binary picture)))
           
+(defn hamming-distance
+  [string-a string-b]
+  (count (filter true? (map (partial reduce not=) (map vector string-a string-b)))))
+
 (defn generate-dhash
   [filename]
   (-> filename
