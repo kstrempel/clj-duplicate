@@ -1,6 +1,6 @@
 # CLJ_DUPLICATE
 
-A Clojure library designed after the idea from ["Detecting duplicate images using Python"](ttp://blog.iconfinder.com/detecting-duplicate-images-using-python/).
+A Clojure library designed after the idea from ["Detecting duplicate images using Python"](http://blog.iconfinder.com/detecting-duplicate-images-using-python/).
 
 ## Usage
 
